@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 20px;
+            /* reduced from 40px */
+            max-width: 1000px;
+            margin: 30px auto;
+            /* reduced space between sections */
+        }
+
+        h2 {
+            color: #222;
+            margin-bottom: 15px;
+        }
+
+        /* About Section Card Layout */
+        .about .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: auto;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .about img {
+            max-width: 250px;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .project-card img,
+        .project-card video {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .project-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #444;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .project-card a:hover {
+            background-color: #222;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            /* reduced from 15px */
+            margin-top: 15px;
+            /* reduced from 30px */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            /* reduced from 40px */
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1 1 400px;
+            padding: 20px;
+        }
+
+        .contact-info h2,
+        .contact-form h2 {
+            margin-top: 0;
+            color: #333;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .contact-info p i {
+            margin-right: 10px;
+            color: #007B5E;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,
+        textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .success-message {
+            margin-top: 10px;
+            color: green;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+        .project-card img,
+.project-card video {
+    width: 100%;
+    height: 200px; /* set fixed height for consistency */
+    object-fit: cover; /* crop to fit without distortion */
+    border-radius: 5px;
+}
+  .project-card img {
+    width: 100%;
+    height: 200px;       /* makes all images the same height */
+    object-fit: cover;   /* crops image to fit without distortion */
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+
+<body>
+    <script src="Form.js"></script>
+
+    <header>
+        <h1>Kasande Emily</h1>
+        <p>Web Developer | Designer | Innovator</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about" class="about">
+        <div class="container">
+            <img src="./Images/portifolio.jpg" alt="Profile Picture">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I’m a passionate developer who loves creating beautiful, user-friendly websites.
+                    My focus is on building modern, responsive designs that work seamlessly across devices.
+                    I am currently a <strong>student at Refactory</strong>, pursuing a <strong>Certificate in Software
+                        Engineering with JavaScript</strong>.
+                    I have successfully completed my first project using <strong>HTML and CSS</strong>, and I am now
+                    advancing my skills with <strong>JavaScript</strong>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="./Images/White And Brown Modern Furniture Instagram Story.jpg"
+                    alt="Business Management System">
+                <h3>Business Management System</h3>
+                <p>A web application to manage business data, built with HTML, CSS, and JavaScript.</p>
+                <a href="https://emilykasande.github.io/MayondoWoods/" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <video autoplay muted loop playsinline>
+                    <source src="./images/g.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Company Website</h3>
+                <p>A corporate website is an online platform that presents a company’s background, values, products or services, impact,
+                and latest updates to inform and engage its audience.</p>
+                <a href="https://emilykasande.github.io/GemstoneGalleria/" target="_blank">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <img src="./Images/Gold and Black Aesthetic Minimalist Font Initials Logo.png" alt="Personal Blog">
+                <h3>E-commerce Website</h3>
+                <p>Online store with shopping cart and payment integration.</p>
+                <a href="https://emilykasande.github.io/commerce/" target="_blank">View Project</a>
+            </div>
+        </div>
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="container">
+                <div class="contact-info">
+                    <h4>Contact Me</h4>
+                    <p>I’m currently learning and building new projects. If you’d like to connect, collaborate, or share advice,
+                        drop me a message below!</p>
+                    
+                    <p><i>📧</i> emilykasande1@gmail.com <br>kasandeemily67@gmail.com</p>
+                    <p><i>📞</i> +256 762348696</p>
+                    <p><i>💼</i> <a href="www.linkedin.com/in/kasande-emily" target="_blank">LinkedIn</a></p>
+                    <p><i>💬</i> <a href="https://wa.me/256762348696" target="_blank">WhatsApp</a></p>
+                    <p><i>🐦</i> <a href="https://twitter.com/your-twitter-handle" target="_blank">Twitter</a></p>
+                    <p><i>📷</i> <a href="https://instagram.com/your-instagram-handle" target="_blank">Instagram</a></p>
+                </div>
+        
+                <div class="contact-form">
+                    <h2>Message</h2>
+                    <form id="contactForm">
+                        <input type="text" id="name" placeholder="Your name" required />
+                        <input type="email" id="email" placeholder="Email address" required />
+                        <textarea id="message" placeholder="Type Message" required></textarea>
+                        <button type="submit">Send</button>
+                        <p class="success-message" id="successMessage">Your message has been sent!</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>
+         <footer>
+        <p>&copy; 2025 Emily Kasande | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>
