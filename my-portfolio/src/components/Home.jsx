@@ -8,18 +8,12 @@ import {
 import "./Home.css";
 
 const PhoneFrame = ({ src, alt }) => (
-  <div className="home-phone-frame-wrapper">
-    <div className="home-phone-frame">
-      <img src={src} alt={alt} className="home-phone-screen" />
-    </div>
+  <div className="home-phone-frame">
+    <img src={src} alt={alt} className="home-phone-screen" />
   </div>
 );
 
-const WebFrame = ({ src, alt }) => (
-  <div className="home-project-img-placeholder">
-    <img src={src} alt={alt} className="home-browser-screen" />
-  </div>
-);
+
 
 export default function Home() {
   return (
@@ -209,7 +203,7 @@ export default function Home() {
           </div>
 
           <div className="home-project-card">
-            <div className="home-project-img-placeholder">
+            <div className="home-phone-project-img-placeholder">
               <PhoneFrame src="/shop%20on.png" alt="Shop On" />
             </div>
             <div className="home-project-info">
@@ -236,7 +230,7 @@ export default function Home() {
                 Inventory management tracking sales, orders, stock, and
                 suppliers.
               </p>
-              <a href="#" className="home-project-link">
+              <a href="https://emilykasande.github.io/MWF/" target="_blank" rel="noopener noreferrer" className="home-project-link">
                 View Case Study <ArrowIcon />
               </a>
             </div>

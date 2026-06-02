@@ -15,7 +15,7 @@ const WebFrame = ({ src, alt }) => (
   </div>
 );
 
-const NAV_LINKS = ["Home", "Projects", "Contact"];
+
 
 const FILTERS = ["All Projects", "Web Apps", "Mobile"];
 
